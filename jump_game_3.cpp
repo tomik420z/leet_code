@@ -1,15 +1,17 @@
 #include <iostream>
 #include <vector>
 #include <stack>
-
+// условие задачи https://leetcode.com/problems/jump-game-iii/description/
 using namespace std;
 
 class Solution {
 public:
     bool canReach(vector<int>& arr, int start) {
+        // массив просмотренных элементов 
+        // used[i] = true, если arr[i] уже просмотренно 
         std::vector<bool> used(arr.size());
         used[start] = true;
-
+        // храним в стеке индексы элементов, которые предстоит рассмотреть
         std::stack<int> stack_ind;
         stack_ind.push(start);
         while(!stack_ind.empty()) {
