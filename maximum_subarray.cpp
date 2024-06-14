@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//! условие задачи https://leetcode.com/problems/maximum-subarray/description/
+
 class Solution {
 public:
     void merge(int left, int right, vector<int>& nums, int& ans) {
